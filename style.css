@@ -1,0 +1,313 @@
+
+:root{
+  --maincolor:#007bff;
+ 
+}
+*
+{
+  font-family:Verdana; /* Use a nice font */
+
+}
+.navbar {
+  background-color: rgb(241, 243, 245);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* White border */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #ffffff; /* Text color */
+  font-size: 1.5rem; /* Font size */
+}
+
+.navbar-brand:hover {
+  color: #17a2b8; /* Hover text color */
+}
+.navbar-nav .nav-link {
+  color: black !important; /* Text color - changed to #007bff */
+  margin-right: 15px; /* Margin between links */
+  font-size: 18px; /* Adjust font size */
+}
+
+
+.navbar-nav .nav-link:hover {
+  color: #007bff !important; /* Hover text color */
+}
+
+.navbar-toggler-icon {
+  color: #ffffff; /* Toggler icon color */
+}
+
+.navbar-toggler {
+  border-color: #ffffff; /* Toggler border color */
+}
+
+.navbar-toggler:hover {
+  border-color: #17a2b8; /* Hover toggler border color */
+}
+
+.main-screen {
+  position: relative; /* Add relative positioning */
+  background-image: url('images/background2.jpg'); /* Replace 'background-image.jpg' with your actual image file */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 50px;
+  background-attachment: fixed; /* Keep background fixed in place */
+}
+
+/* Semi-transparent layer */
+.main-screen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity as needed */
+}
+
+/* Content on transparent layer */
+.main-screen-content {
+  position: relative; /* Add relative positioning */
+  z-index: 1; /* Ensure content appears above the semi-transparent layer */
+  max-width: 600px;
+  color: white;
+  text-align: center;
+}
+
+.btn-appointment {
+  padding: 10px;
+  position: relative; /* Add relative positioning */
+  z-index: 1; /* Ensure button appears above the semi-transparent layer */
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-appointment:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+
+/* About Us Section */
+.about-section {
+  padding: 105px 0; /* Increased padding */
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+.about-content {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.about-content h2
+{
+  color: #007bff;
+}
+.about-content p {
+  text-align: justify; /* Justify the content */
+  font-size: 19px; /* Adjust font size */
+  line-height: 1.6; /* Adjust line height */
+}
+
+.about-heading {
+  font-size: 40px;
+  color: #007bff; /* Blue color */
+}
+
+
+.our-service{
+  width: 100%;
+  padding: 3rem 7%;
+}
+.service-heading h2{
+  font-size: 40px;
+  color: #007bff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+}
+.inner-services{
+  margin: 10px;
+  padding: 2rem 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: transform 0.3s ease, border-bottom 0.3s ease, background-color 0.3s ease; /* Adding transition for smoother animation */
+
+}
+.inner-services p
+{
+  text-align: justify;
+}
+
+.inner-services:hover{
+  transform: translateY(-10px);
+  border-bottom: 2px solid var(--maincolor);
+  background-color: #f5f5f5;
+}
+
+.inner-services:hover .service-icon{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: var(--maincolor);
+  
+}
+.inner-services:hover .service-icon i{
+  color: white;
+  transform: scale(1.1) ;
+}
+.service-icon{
+  font-size: medium;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid var(--maincolor);
+  background-color: #f5f5f5;
+}
+service-icon i{
+  font-size: 3rem;
+  color: var(--maincolor);
+  padding: 1rem;
+}
+
+
+.best-doctors {
+  padding: 3rem ;
+}
+
+.doctor {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.doctor img {
+  border-radius: 10%;
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+.doctor h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.doctor p {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.doctor:hover {
+  transform: translateY(-5px); /* Move the doctor card up slightly on hover */
+}
+
+ /* Custom CSS for the review section */
+ .review-section {
+  padding: 90px 0;
+
+}
+.review-heading
+{
+  margin-top: -30px;
+  font-size: 40px;
+  color: #007bff; 
+}
+.review-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 auto;
+}
+.review-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+.review-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.review-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+.review-text {
+  font-size: 16px;
+  color: #555;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.contact-section {
+  padding: 70px 0;
+}
+.contact-heading {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 40px;
+  color: #007bff;
+}
+.contact-map {
+  height: 400px;
+  width: 100%;
+}
+.contact-form {
+  padding: 0 15px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  background-color: #0f1010;
+  padding: 20px 0;
+}
+.footer p {
+  color: white;
+  margin-bottom: 0;
+}
